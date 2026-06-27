@@ -12,7 +12,7 @@ manifest:
       revision: main
       import: app/west.yml
     - name: zmk-raw-hid
-      remote: zzeneg
+      remote: ovandongen
       revision: main
     - name: zmk-hid-viz
       remote: ovandongen
