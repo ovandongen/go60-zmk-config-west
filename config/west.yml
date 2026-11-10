@@ -16,6 +16,6 @@ manifest:
       revision: main
     - name: zmk-hid-viz
       remote: ovandongen
-      revision: main
+      revision: dev
   self:
     path: config
