@@ -164,6 +164,7 @@
 #define LAYER_Nav_Alt_Shift 5
 #define LAYER_Mouse_Signals 6
 #define LAYER_Magic 7
+#define LAYER_Numbers 8
 
 /* To deal with the situation where there is no Lower layer, to keep &lower happy */
 #ifndef LAYER_Lower
@@ -609,7 +610,7 @@
             bindings = <
  &to LAYER_Keypad                     &mt F1 N1  &mt F2 N2       &mt F3 N3  &mt F4 N4  &mt F5 N5                                                                                                &mt F6 N6        &mt F7 N7            &mt F8 N8                  &mt F9 N9                        &mt F10 N0                     &mt F12 MINUS
        &caps_word                         &kp Q      &kp W           &kp E      &kp R      &kp T                                                                                                    &kp Y            &kp U                &kp I                      &kp O                             &kp P                          &kp BSLH
-          &kp ESC                         &kp A      &kp S           &kp D      &kp F      &kp G                                                                                                    &kp H  &lt LAYER_Nav J  &lt LAYER_Nav_Alt K  &lt LAYER_Nav_Alt_Shift L                          &kp SEMI  &HRM_right_hand_v1_TKZ RSHFT SQT
+          &kp ESC                         &kp A      &kp S           &kp D      &lt 8 F    &kp G                                                                                                    &kp H  &lt LAYER_Nav J  &lt LAYER_Nav_Alt K  &lt LAYER_Nav_Alt_Shift L                          &kp SEMI  &HRM_right_hand_v1_TKZ RSHFT SQT
         &kp LCTRL  &HRM_left_hand_v1_TKZ LALT Z      &kp X           &kp C      &kp V      &kp B                                                                                                    &kp N            &kp M            &kp COMMA                    &kp DOT  &HRM_right_hand_v1_TKZ RALT FSLH              &magic LAYER_Magic 0
                                                  &mkp LCLK  &dragscroll_mo  &mkp RCLK                                                                                                                               &kp UP             &kp DOWN                    &kp DEL
                                                                                                   &lt LAYER_Symbol RET  &kp LSHFT  &kp TAB  &lt LAYER_Mouse_Signals RCTRL  &kp BSPC  &kp SPACE
@@ -690,6 +691,18 @@
        &none            &none            &bt_0            &bt_1            &bt_2            &bt_3                                                               &none         &none         &none   &none       &none           &none
                                   &out OUT_USB            &none   &to LAYER_Base                                                                                              &none         &none   &none
                                                                                                    &to LAYER_Base   &none   &none   &none   &none   &none
+            >;
+        };
+
+        layer_Numbers {
+            display-name = "Numbers";
+            bindings = <
+            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+            &trans  &trans  &trans  &trans  &trans  &trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &trans
+            &trans  &trans  &trans  &trans  &trans  &trans  &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &trans
+            &trans  &trans  &trans  &trans  &trans  &trans
+            &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
 
